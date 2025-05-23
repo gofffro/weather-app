@@ -28,30 +28,30 @@
     /// </summary>
     private void InitializeComponent()
     {
-      textBox1 = new TextBox();
-      comboBox1 = new ComboBox();
+      CityTextBox = new TextBox();
+      ServiceComboBox = new ComboBox();
       textBox2 = new TextBox();
       textBox3 = new TextBox();
-      label1 = new Label();
+      WeatherResultLabel = new Label();
       GetWeatherButton = new Button();
       SuspendLayout();
       // 
-      // textBox1
+      // CityTextBox
       // 
-      textBox1.Location = new Point(30, 48);
-      textBox1.Name = "textBox1";
-      textBox1.Size = new Size(200, 23);
-      textBox1.TabIndex = 0;
+      CityTextBox.Location = new Point(30, 48);
+      CityTextBox.Name = "CityTextBox";
+      CityTextBox.Size = new Size(200, 23);
+      CityTextBox.TabIndex = 0;
       // 
-      // comboBox1
+      // ServiceComboBox
       // 
-      comboBox1.FormattingEnabled = true;
-      comboBox1.Items.AddRange(new object[] { "OpenWeather", "YandexWeather" });
-      comboBox1.Location = new Point(30, 99);
-      comboBox1.Name = "comboBox1";
-      comboBox1.Size = new Size(200, 23);
-      comboBox1.TabIndex = 2;
-      comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+      ServiceComboBox.FormattingEnabled = true;
+      ServiceComboBox.Items.AddRange(new object[] { "OpenWeather", "AccuWeather" });
+      ServiceComboBox.Location = new Point(30, 99);
+      ServiceComboBox.Name = "ServiceComboBox";
+      ServiceComboBox.Size = new Size(200, 23);
+      ServiceComboBox.TabIndex = 2;
+      ServiceComboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
       // 
       // textBox2
       // 
@@ -75,14 +75,13 @@
       textBox3.TabIndex = 5;
       textBox3.Text = "Выберите сервис погоды:";
       // 
-      // label1
+      // WeatherResultLabel
       // 
-      label1.AutoSize = true;
-      label1.Location = new Point(401, 48);
-      label1.Name = "label1";
-      label1.Size = new Size(13, 15);
-      label1.TabIndex = 6;
-      label1.Text = "1";
+      WeatherResultLabel.AutoSize = true;
+      WeatherResultLabel.Location = new Point(401, 48);
+      WeatherResultLabel.Name = "WeatherResultLabel";
+      WeatherResultLabel.Size = new Size(0, 15);
+      WeatherResultLabel.TabIndex = 6;
       // 
       // GetWeatherButton
       // 
@@ -92,6 +91,7 @@
       GetWeatherButton.TabIndex = 7;
       GetWeatherButton.Text = "Получить погоду";
       GetWeatherButton.UseVisualStyleBackColor = true;
+      GetWeatherButton.Click += GetWeatherButton_Click;
       // 
       // Form1
       // 
@@ -99,11 +99,11 @@
       AutoScaleMode = AutoScaleMode.Font;
       ClientSize = new Size(834, 358);
       Controls.Add(GetWeatherButton);
-      Controls.Add(label1);
+      Controls.Add(WeatherResultLabel);
       Controls.Add(textBox3);
       Controls.Add(textBox2);
-      Controls.Add(comboBox1);
-      Controls.Add(textBox1);
+      Controls.Add(ServiceComboBox);
+      Controls.Add(CityTextBox);
       Name = "Form1";
       Text = "Form1";
       ResumeLayout(false);
@@ -112,11 +112,11 @@
 
     #endregion
 
-    private TextBox textBox1;
-    private ComboBox comboBox1;
+    private TextBox CityTextBox;
+    private ComboBox ServiceComboBox;
     private TextBox textBox2;
     private TextBox textBox3;
-    private Label label1;
+    private Label WeatherResultLabel;
     private Button GetWeatherButton;
   }
 }

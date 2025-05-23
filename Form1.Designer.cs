@@ -46,10 +46,12 @@
       // comboBox1
       // 
       comboBox1.FormattingEnabled = true;
+      comboBox1.Items.AddRange(new object[] { "OpenWeather", "YandexWeather" });
       comboBox1.Location = new Point(30, 99);
       comboBox1.Name = "comboBox1";
       comboBox1.Size = new Size(200, 23);
       comboBox1.TabIndex = 2;
+      comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
       // 
       // textBox2
       // 

@@ -57,6 +57,7 @@
       textBox2.BorderStyle = BorderStyle.None;
       textBox2.Location = new Point(30, 26);
       textBox2.Name = "textBox2";
+      textBox2.ReadOnly = true;
       textBox2.Size = new Size(200, 16);
       textBox2.TabIndex = 3;
       textBox2.Text = "Введите название города:";
@@ -67,6 +68,7 @@
       textBox3.BorderStyle = BorderStyle.None;
       textBox3.Location = new Point(30, 77);
       textBox3.Name = "textBox3";
+      textBox3.ReadOnly = true;
       textBox3.Size = new Size(200, 16);
       textBox3.TabIndex = 5;
       textBox3.Text = "Выберите сервис погоды:";
